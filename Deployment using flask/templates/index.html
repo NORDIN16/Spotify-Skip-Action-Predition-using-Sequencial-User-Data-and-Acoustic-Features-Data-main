@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+
+  <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <header>Spotify skip action prediction</header>
+
+    <form action="{{ url_for('predict')}}" method="post">
+      <div class="form first">
+        <div class="details personal">
+          <div class="fields">
+
+            <div class="input-field">
+              <label>track_id</label>
+              <input type="number" placeholder="track_id" name="track_id" required>
+            </div>
+            
+           <div class="input-field">
+              <label>session_length</label>
+              <input type="number" placeholder="session_length" name="session_length" required >
+            </div>
+
+            <div class="input-field">
+              <label>no_pause_before_play</label>
+              <input type="number" placeholder="no_pause_before_play" name="no_pause_before_play" required>
+            </div>
+            
+           <div class="input-field">
+              <label>hist_user_behavior_n_seekfwd</label>
+              <input type="number" placeholder="hist_user_behavior_n_seekfwd" name="hist_user_behavior_n_seekfwd" required >
+            </div>
+
+            <div class="input-field">
+              <label>hour_of_day</label>
+              <input type="number" placeholder="hour_of_day" name="hour_of_day" required>
+            </div>
+            
+           <div class="input-field">
+              <label>context_type</label>
+              <input type="number" placeholder="context_type" name="context_type" required >
+            </div>
+
+            <div class="input-field">
+              <label>hist_user_behavior_reason_start</label>
+              <input type="number" placeholder="hist_user_behavior_reason_start" name="hist_user_behavior_reason_start" required>
+            </div>
+            
+           <div class="input-field">
+              <label>context_switch</label>
+              <input type="number" placeholder="context_switch" name="context_switch" required >
+            </div>
+
+            <div class="input-field">
+              <label>session_position</label>
+              <input type="number" placeholder="session_position" name="session_position" required>
+            </div>
+            
+           <div class="input-field">
+              <label>hist_user_behavior_n_seekback</label>
+              <input type="number" placeholder="hist_user_behavior_n_seekback" name="hist_user_behavior_n_seekback" required >
+            </div>
+
+            <div class="input-field">
+              <label>weekday</label>
+              <input type="number" placeholder="1:monday | 2:Tuesday | ..." name="weekday" required>
+            </div>
+            
+           <div class="input-field">
+              <label>premium</label>
+              <input type="number" placeholder="1:True | 0:False" name="premium" required >
+            </div>
+
+            <div class="input-field">
+              <label>hist_user_behavior_reason_end</label>
+              <input type="number" placeholder="hist_user_behavior_reason_end" name="hist_user_behavior_reason_end" required>
+            </div>
+
+            <button type="submit"  class="btn btn-primary btn-block btn-large">Predict</button>
+          </div>
+        </div>
+      </div>
+      <div class="prediction">
+        <h2> {{ prediction_text }} </h2>
+    </div>
+     <footer>&copy; Noureddine ARAB</footer>
+</body>
+
+</html>
