@@ -1,6 +1,6 @@
 # Spotify-Skip-Action-Predition-using-Sequencial-User-Data-and-Acoustic-Features-Data
 
-## Prepared by *TEAM B/RAJA BEN HARRAF*
+## Prepared by 
 Raja BEN HARRAF
 Noureddine ARAB
 Abdelrahman ABDELGHANY
